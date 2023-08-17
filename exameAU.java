@@ -2,14 +2,14 @@ import javax.swing.JOptionPane;
 
 public class exameAU extends exame{
 
-    private float acidoUrico;
+    private Double acidoUrico;
     private String resultado;
 
-    public float getacidoUrico(){
+    public Double getacidoUrico(){
         return acidoUrico;
     }
 
-    public void setacidoUrico(float acidoUrico){
+    public void setacidoUrico(Double acidoUrico){
         this.acidoUrico = acidoUrico;
     }
 
@@ -24,7 +24,7 @@ public class exameAU extends exame{
     
    @Override
     public void CadastrarExame(){
-        acidoUrico = Float.parseFloat(JOptionPane.showInputDialog("Digite a quantidade de Acido Urico:"));
+        acidoUrico = Double.valueOf(JOptionPane.showInputDialog("Digite a quantidade de Acido Urico:"));
 
         if(acidoUrico <= 6.8){
             resultado = "Acido Urico totalmente diluido!";
