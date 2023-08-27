@@ -7,7 +7,7 @@ public class Main {
 
         do{
             
-            opt = Integer.parseInt(JOptionPane.showInputDialog(null,"=====ESCOLHA O TIPO DE EXAME====== \n 1-Exame-Glicemia \n 2-Exame-Colesterol\n 3-ExameTrigliceridios\n 4- Exame de Acido urico\n 0-Sair" ));
+            opt = Integer.parseInt(JOptionPane.showInputDialog(null,"=====ESCOLHA O TIPO DE EXAME====== \n 1-Exame-Glicemia \n 2-Exame-Colesterol\n 3-ExameTrigliceridios\n 4- Exame de Acido urico\n 5-Exame de Creatinofosfoquinase \n 0-Sair" ));
             
             switch(opt){
                 case 1:
@@ -29,6 +29,11 @@ public class Main {
                 exameAU eAU = new exameAU();
                 eAU.CadastrarExame();
                 eAU.classificarResultado();
+            break;
+                case 5:
+                examecpk creati = new examecpk();
+                creati.CadastrarExame();
+                creati.classificarResultado();
             break;
                 case 0:
                 JOptionPane.showMessageDialog(null,"Muito obrigado por usar o programa!");
